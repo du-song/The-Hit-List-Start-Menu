@@ -7,21 +7,72 @@
 //
 
 import Cocoa
+import ScriptingBridge
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	@IBOutlet weak var window: NSWindow!
+	@IBOutlet weak var statusMenu: NSMenu!
+
+	var statusItem: NSStatusItem
+	
+	override init()	{
+		let _NSSquareStatusItemLength: CGFloat = -2 // TODO: Workaround, should actually be: NSSquareStatusItemLength (see http://stackoverflow.com/questions/24024723/swift-using-nsstatusbar-statusitemwithlength-and-nsvariablestatusitemlength )
+		self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(_NSSquareStatusItemLength)
+	}
+
+	override func awakeFromNib() {
+		self.statusItem.menu = self.statusMenu
+		self.statusItem.highlightMode = true
+	}
 
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		// Insert code here to initialize your application
+		self.statusItem.title = "✔"
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
 		// Insert code here to tear down your application
 	}
 
+	func menuNeedsUpdate(menu: NSMenu!) {
+		if (menu != self.statusMenu) {
+			return
+		}
+		menu.removeAllItems()
+		
+		var thl:AnyObject = SBApplication.applicationWithBundleIdentifier("com.potionfactory.TheHitList")
+		var list = thl.todayList!
+		var tasks = list.tasks()
+		for task in tasks {
+			if task.completed! { continue }
+			var item = NSMenuItem(title:SBWorkaround.getTitle(task), action: "statusMenuItemTask_Action:", keyEquivalent: "")
+			item.representedObject = task.url!
+			menu.addItem(item)
+		}
+		
+		menu.addItem(NSMenuItem.separatorItem())
+		menu.addItem(NSMenuItem(title: "Quit THL Menu", action: "statusMenuItemQuit_Action:", keyEquivalent: ""))
+	}
 
+	func statusMenuItemTask_Action(sender: NSMenuItem)	{
+		var u = sender.representedObject as NSString
+		var r = NSWorkspace.sharedWorkspace().openURL(NSURL(string:u)!)
+//		`osascript -e 'tell application "System Events" to keystroke "2" using {command down}'`
+		var thl:AnyObject = SBApplication.applicationWithBundleIdentifier("com.potionfactory.TheHitList")
+		var list = thl.todayList!
+		var tasks = list.tasks()
+		for task in tasks {
+			if u != task.url! {
+				continue
+			}
+			task.beginTiming()
+		}
+		
+	}
+	
+	func statusMenuItemQuit_Action(sender: NSMenuItem)	{
+		NSApplication.sharedApplication().terminate(self)
+	}
 }
 
