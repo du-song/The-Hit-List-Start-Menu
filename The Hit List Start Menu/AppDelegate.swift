@@ -15,7 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var statusMenu: NSMenu!
 
 	var statusItem: NSStatusItem
-	
+	var cmd2Script = NSAppleScript(source: "tell application \"System Events\" to keystroke \"2\" using {command down}")!
+
 	override init()	{
 		let _NSSquareStatusItemLength: CGFloat = -2 // TODO: Workaround, should actually be: NSSquareStatusItemLength (see http://stackoverflow.com/questions/24024723/swift-using-nsstatusbar-statusitemwithlength-and-nsvariablestatusitemlength )
 		self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(_NSSquareStatusItemLength)
@@ -52,13 +53,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 		
 		menu.addItem(NSMenuItem.separatorItem())
-		menu.addItem(NSMenuItem(title: "Quit THL Menu", action: "statusMenuItemQuit_Action:", keyEquivalent: ""))
+		menu.addItem(NSMenuItem(title: "Quit The Hit List Start Menu", action: "statusMenuItemQuit_Action:", keyEquivalent: ""))
 	}
 
 	func statusMenuItemTask_Action(sender: NSMenuItem)	{
 		var u = sender.representedObject as NSString
 		var r = NSWorkspace.sharedWorkspace().openURL(NSURL(string:u)!)
-//		`osascript -e 'tell application "System Events" to keystroke "2" using {command down}'`
 		var thl:AnyObject = SBApplication.applicationWithBundleIdentifier("com.potionfactory.TheHitList")
 		var list = thl.todayList!
 		var tasks = list.tasks()
@@ -67,8 +67,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				continue
 			}
 			task.beginTiming()
+			_ = cmd2Script.executeAndReturnError(nil)
 		}
-		
 	}
 	
 	func statusMenuItemQuit_Action(sender: NSMenuItem)	{

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		738E2D4E1A79442B0084B630 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738E2D4D1A79442B0084B630 /* MainMenu.xib */; };
+		738E2D4F1A7945F90084B630 /* Images.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 73E960281A762BA300D81D30 /* Images.xcassets */; };
 		73A104E31A78C13E004F0190 /* SBWorkaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A104E21A78C13E004F0190 /* SBWorkaround.m */; };
-		73A104E51A78C385004F0190 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 73A104E41A78C385004F0190 /* readme.md */; };
 		73E960271A762BA300D81D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E960261A762BA300D81D30 /* AppDelegate.swift */; };
 		73E960291A762BA300D81D30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73E960281A762BA300D81D30 /* Images.xcassets */; };
-		73E9602C1A762BA300D81D30 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E9602A1A762BA300D81D30 /* MainMenu.xib */; };
 		73E960381A762BA300D81D30 /* The_Hit_List_Start_MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E960371A762BA300D81D30 /* The_Hit_List_Start_MenuTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,8 @@
 /* Begin PBXFileReference section */
 		731A7F061A78A8AD00EA3A7F /* The_Hit_List_Start_Menu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "The_Hit_List_Start_Menu-Bridging-Header.h"; sourceTree = "<group>"; };
 		731A7F071A78AB8000EA3A7F /* TheHitList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheHitList.h; sourceTree = "<group>"; };
+		738E2D4C1A79440A0084B630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MainMenu.xib; sourceTree = "<group>"; };
+		738E2D4D1A79442B0084B630 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		73A104E11A78C13E004F0190 /* SBWorkaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWorkaround.h; sourceTree = "<group>"; };
 		73A104E21A78C13E004F0190 /* SBWorkaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkaround.m; sourceTree = "<group>"; };
 		73A104E41A78C385004F0190 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
@@ -35,7 +37,6 @@
 		73E960251A762BA300D81D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73E960261A762BA300D81D30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73E960281A762BA300D81D30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		73E9602B1A762BA300D81D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73E960311A762BA300D81D30 /* The Hit List Start MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Hit List Start MenuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E960361A762BA300D81D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73E960371A762BA300D81D30 /* The_Hit_List_Start_MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Hit_List_Start_MenuTests.swift; sourceTree = "<group>"; };
@@ -59,9 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		738E2D4A1A79440A0084B630 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				738E2D4B1A79440A0084B630 /* MainMenu.xib */,
+			);
+			name = Base.lproj;
+			path = "The Hit List Start Menu/Base.lproj";
+			sourceTree = "<group>";
+		};
 		73E960181A762BA300D81D30 = {
 			isa = PBXGroup;
 			children = (
+				738E2D4A1A79440A0084B630 /* Base.lproj */,
 				73A104E41A78C385004F0190 /* readme.md */,
 				73E960231A762BA300D81D30 /* The Hit List Start Menu */,
 				73E960341A762BA300D81D30 /* The Hit List Start MenuTests */,
@@ -85,8 +96,6 @@
 				73A104E21A78C13E004F0190 /* SBWorkaround.m */,
 				731A7F071A78AB8000EA3A7F /* TheHitList.h */,
 				73E960261A762BA300D81D30 /* AppDelegate.swift */,
-				73E960281A762BA300D81D30 /* Images.xcassets */,
-				73E9602A1A762BA300D81D30 /* MainMenu.xib */,
 				73E960241A762BA300D81D30 /* Supporting Files */,
 				731A7F061A78A8AD00EA3A7F /* The_Hit_List_Start_Menu-Bridging-Header.h */,
 			);
@@ -96,6 +105,8 @@
 		73E960241A762BA300D81D30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				73E960281A762BA300D81D30 /* Images.xcassets */,
+				738E2D4D1A79442B0084B630 /* MainMenu.xib */,
 				73E960251A762BA300D81D30 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -200,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E960291A762BA300D81D30 /* Images.xcassets in Resources */,
-				73E9602C1A762BA300D81D30 /* MainMenu.xib in Resources */,
+				738E2D4E1A79442B0084B630 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738E2D4F1A7945F90084B630 /* Images.xcassets in Sources */,
 				73A104E31A78C13E004F0190 /* SBWorkaround.m in Sources */,
-				73A104E51A78C385004F0190 /* readme.md in Sources */,
 				73E960271A762BA300D81D30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,10 +254,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		73E9602A1A762BA300D81D30 /* MainMenu.xib */ = {
+		738E2D4B1A79440A0084B630 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				73E9602B1A762BA300D81D30 /* Base */,
+				738E2D4C1A79440A0084B630 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
