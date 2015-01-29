@@ -44,11 +44,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		var thl:AnyObject = SBApplication.applicationWithBundleIdentifier("com.potionfactory.TheHitList")
 		var list = thl.todayList!
+		var timingURL = SBWorkaround.getUrl(thl.timingTask) as String?
 		var tasks = list.tasks()
 		for task in tasks {
 			if task.completed! { continue }
 			var item = NSMenuItem(title:SBWorkaround.getTitle(task), action: "statusMenuItemTask_Action:", keyEquivalent: "")
 			item.representedObject = task.url!
+			if (timingURL == task.url!) {
+				item.state = NSOnState
+			}
 			menu.addItem(item)
 		}
 		

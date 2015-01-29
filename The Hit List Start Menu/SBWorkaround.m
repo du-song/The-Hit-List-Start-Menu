@@ -7,9 +7,13 @@
 //
 
 #import "SBWorkaround.h"
+#import <objc/runtime.h>
 
 @implementation SBWorkaround
 + (NSString *)getTitle:(id) object {
 	return [object title];
+}
++ (NSString *)getUrl:(id) object {
+	return object ? objc_msgSend(object, @selector(url)) : @"";
 }
 @end

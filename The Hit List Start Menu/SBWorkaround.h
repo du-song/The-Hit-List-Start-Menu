@@ -10,4 +10,5 @@
 
 @interface SBWorkaround : NSObject
 + (NSString *)getTitle:(id) object; // TODO: Workaround, otherwise compile fail when call task.title
++ (NSString *)getUrl:(id) object;
 @end

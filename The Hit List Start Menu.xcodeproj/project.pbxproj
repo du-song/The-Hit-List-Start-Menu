@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		738E2D4E1A79442B0084B630 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738E2D4D1A79442B0084B630 /* MainMenu.xib */; };
+		7314A2FA1A7A9DCD00107699 /* MainMenu.xib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7314A2F61A7A9D7700107699 /* MainMenu.xib */; };
+		7314A2FB1A7A9DF400107699 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7314A2F61A7A9D7700107699 /* MainMenu.xib */; };
 		738E2D4F1A7945F90084B630 /* Images.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 73E960281A762BA300D81D30 /* Images.xcassets */; };
 		73A104E31A78C13E004F0190 /* SBWorkaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A104E21A78C13E004F0190 /* SBWorkaround.m */; };
 		73E960271A762BA300D81D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E960261A762BA300D81D30 /* AppDelegate.swift */; };
@@ -25,11 +26,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7314A2F21A7A9CE800107699 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				7314A2FA1A7A9DCD00107699 /* MainMenu.xib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7314A2F71A7A9D7700107699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MainMenu.xib; sourceTree = "<group>"; };
 		731A7F061A78A8AD00EA3A7F /* The_Hit_List_Start_Menu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "The_Hit_List_Start_Menu-Bridging-Header.h"; sourceTree = "<group>"; };
 		731A7F071A78AB8000EA3A7F /* TheHitList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheHitList.h; sourceTree = "<group>"; };
-		738E2D4C1A79440A0084B630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MainMenu.xib; sourceTree = "<group>"; };
-		738E2D4D1A79442B0084B630 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		73A104E11A78C13E004F0190 /* SBWorkaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWorkaround.h; sourceTree = "<group>"; };
 		73A104E21A78C13E004F0190 /* SBWorkaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkaround.m; sourceTree = "<group>"; };
 		73A104E41A78C385004F0190 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
@@ -60,19 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		738E2D4A1A79440A0084B630 /* Base.lproj */ = {
+		7314A2F51A7A9D7700107699 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				738E2D4B1A79440A0084B630 /* MainMenu.xib */,
+				7314A2F61A7A9D7700107699 /* MainMenu.xib */,
 			);
-			name = Base.lproj;
-			path = "The Hit List Start Menu/Base.lproj";
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		73E960181A762BA300D81D30 = {
 			isa = PBXGroup;
 			children = (
-				738E2D4A1A79440A0084B630 /* Base.lproj */,
 				73A104E41A78C385004F0190 /* readme.md */,
 				73E960231A762BA300D81D30 /* The Hit List Start Menu */,
 				73E960341A762BA300D81D30 /* The Hit List Start MenuTests */,
@@ -106,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				73E960281A762BA300D81D30 /* Images.xcassets */,
-				738E2D4D1A79442B0084B630 /* MainMenu.xib */,
+				7314A2F51A7A9D7700107699 /* Base.lproj */,
 				73E960251A762BA300D81D30 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -139,6 +150,7 @@
 				73E9601D1A762BA300D81D30 /* Sources */,
 				73E9601E1A762BA300D81D30 /* Frameworks */,
 				73E9601F1A762BA300D81D30 /* Resources */,
+				7314A2F21A7A9CE800107699 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -211,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E960291A762BA300D81D30 /* Images.xcassets in Resources */,
-				738E2D4E1A79442B0084B630 /* MainMenu.xib in Resources */,
+				7314A2FB1A7A9DF400107699 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +266,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		738E2D4B1A79440A0084B630 /* MainMenu.xib */ = {
+		7314A2F61A7A9D7700107699 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				738E2D4C1A79440A0084B630 /* Base */,
+				7314A2F71A7A9D7700107699 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
